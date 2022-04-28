@@ -28,23 +28,39 @@ struct CustomComposableView: View {
     
     var body: some View {
         ZStack{
-           Circle()
+            
+            Color.black
+                .edgesIgnoringSafeArea(.all)
+            
+            Text("🌙")
+                 .padding()
+                 .blur(radius: 60.0)
+                 .font(.system(size: 220))
+                 .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true))
+                 .onReceive(timer){ Input in
+                     yShadow -= -20
+                     
+                     
+                     
+                                  
+                 }
+            
+            Text("🌙")
                 .padding()
-                .rotationEffect(.degrees(rotation))
+                .font(.system(size: 220))
                 .shadow(color: .black, radius: 3, x: 20, y: 20)
-                .foregroundColor(.orange)
                 .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true))
                 .onReceive(timer){ Input in
                     yShadow -= -20
                     
-                    rotation += 300
                     
                     
                                  
                 }
             ZStack{
-                Text("Jerry Dai")
+                Text("⭐️")
                     .padding()
+                    .font(.system(size: 80))
                     .rotationEffect(.degrees(rotation))
                     .shadow(color: .black, radius: 3, x: 20, y: 20)
                     .foregroundColor(.red)
