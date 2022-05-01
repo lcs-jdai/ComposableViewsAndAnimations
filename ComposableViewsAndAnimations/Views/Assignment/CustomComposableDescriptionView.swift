@@ -25,9 +25,8 @@ struct CustomComposableDescriptionView: View {
                     .padding(.top)
                 
                 Text("""
-                    Replace this with a description of how to use this view.
-
-                    If the view accepts a parameter, provide a control to enter the input below.
+                        This animation could be used for a art project, because this is a very beautiful view. And I also want to add this animation to my music app. Maybe this animation could also be used fot a clock app. When the time past 10:oopm, the app will show this cool animation.
+                    
                     """)
                 
                 TextField("Enter an input value", text: $phrase)
